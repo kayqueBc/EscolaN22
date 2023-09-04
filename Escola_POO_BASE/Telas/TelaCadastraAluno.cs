@@ -231,7 +231,7 @@ namespace Escola_POO_BASE.Telas
 
         private void DgvUsuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            if (e.RowIndex == 0)
             //TODO AV PARTE 3 - Não realizar o DoubleClick caso o aluno já estiver Inativo
             try
             {
@@ -263,12 +263,8 @@ namespace Escola_POO_BASE.Telas
         }
 
         //TODO AV PARTE 2 - Click do Botão Reativar
-        private void BtnReativar_Click(object sender, EventArgs e, List<Aluno> alunos = null)
+        private void BtnReativar_Click(object sender, EventArgs e)
         {
-            if ( alunos is null)
-            {
-                throw new ArgumentNullException();
-            }
 
             try
             {
